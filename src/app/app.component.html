@@ -6,7 +6,23 @@
     <div class="segment">Email</div>
     <div class="segment">Role</div>
   </div>
-  <div class="row row__content" *ngFor="let user of users">
+  <div
+    class="row row__content"
+    *ngFor="
+      let user of users;
+      let i = index;
+      let first = first;
+      let last = last;
+      let even = even;
+      let odd = odd
+    "
+    [ngClass]="{
+      row_first: first,
+      row_last: last,
+      row_odd: odd,
+      row_even: even
+    }"
+  >
     <div class="segment">{{ user.firstName }} {{ user.lastName }}</div>
     <div class="segment">{{ user.email }}</div>
     <div class="segment">{{ user.role }}</div>

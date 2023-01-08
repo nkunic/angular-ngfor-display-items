@@ -1,5 +1,12 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 .list {
   border: 1px solid black;
+  
   .row {
     display: flex;
     align-items: center;
@@ -8,7 +15,7 @@
       font-weight: bold;
       background-color: gray;
     }
-    &.row__content:nth-child(odd) {
+    &.row_odd {
       background-color: lightgray;
     }
   }
@@ -20,6 +27,7 @@
     flex: 1;
     padding: 0.625rem;
   }
+
   .segment + .segment {
     border-left: 1px solid black;
   }
