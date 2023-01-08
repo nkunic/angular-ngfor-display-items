@@ -1,12 +1,26 @@
-.table {
-  &.table-striped {
-    tbody {
-      tr:nth-child(odd) {
-        background-color: lightgray;
-      }
+.list {
+  border: 1px solid black;
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &.row__header {
+      font-weight: bold;
+      background-color: gray;
+    }
+    &.row__content:nth-child(odd) {
+      background-color: lightgray;
     }
   }
-  &.table-bordered {
-    border: 1px solid black;
+  .row + .row {
+    border-top: 1px solid black;
+  }
+
+  .segment {
+    flex: 1;
+    padding: 0.625rem;
+  }
+  .segment + .segment {
+    border-left: 1px solid black;
   }
 }
